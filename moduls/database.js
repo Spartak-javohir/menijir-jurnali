@@ -5,7 +5,7 @@ const path = require('path')
 
 module.exports = class Database{
     constructor(){
-        this.kurspath = path.join(__dirname, '../ruots/kurs.json')
+        this.kurspath = path.join(__dirname, '../kurs.json')
         this.kursdata = []
         this.readkursfile()
         
@@ -16,5 +16,6 @@ module.exports = class Database{
         let kursdata = await fs.readFile(this.kurspath, 'utf-8')
         kursdata = await JSON.parse(kursdata)
         this.kursdata = kursdata.kursdata
+        console.log(kursdata.kursdata);
     }
 }

@@ -3,7 +3,7 @@ const path = require('path')
 
 module.exports = class Uquvdatabase{
     constructor(){
-        this.uquvchipath = path.join(__dirname, '../ruots/uquvchi.json')
+        this.uquvchipath = path.join(__dirname, '../uquvchi.json')
         this.uquvchidata = []
         this.readuquvfile()
     }
