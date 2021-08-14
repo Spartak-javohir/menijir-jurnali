@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+}
 ol, ul{
     list-style: none;
 }
@@ -19,4 +22,19 @@ a{
 .section{
     margin-top: 50px;
     
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        form{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .input__div{
+                display: flex; 
+                flex-direction: column;
+            }
+        }
+    }
 }
