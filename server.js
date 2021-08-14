@@ -18,4 +18,12 @@ const kdb = new kursdatabase()
     let reed = await fs.readFile(__dirname+'/views/index.html', 'utf-8')
     res.send(reed)
  })
+
+ app.get('/baz', async (req, res)=>{
+    let data = await kdb.readkursfile();
+    res.json({
+        data: kursdata
+    })
+ }
+ )
  
