@@ -5,7 +5,9 @@ const uquvdatabase = require('./moduls/uquvdatabase')
 
 
 
-const kdb = new kursdatabase()
+const udb = new uquvdatabase()
+// const kdb = new kursdatabase()
+
 
 
  const app = express();

@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>manager list</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
-    <section class="section">
-        <div class="container">
+    <section class="section mt-4">
+        <div class="container d-flex flex-column align-items-center justify-content-center">
             <nav class="navbar">
-                <form action="POST">
+                <form class="d-flex" action="/add-popul">
                     
-                    <div class="input__div">
-                        <span>namunadagidek yozing</span>
+                    <div class=" mr-2 d-flex flex-column input__div">
+                        <span class="text-secondary">namunadagidek yozing</span>
                         <input class="add__student" type="text" required placeholder="ismi familiyasi yoshi" >
                     </div>
-                    <select name="hudud" id="selectHudud">
+                    <select class="mx-2" name="hudud" id="selectHudud">
                         <option value="active">Viloyat</option>
                         <option value="andijon">Andijon</option>
                         <option value="buxoro">Buxoro</option>
@@ -34,33 +34,30 @@
                         <option value="qoraqalpogiston">Qoraqalpog'iston</option>
                         <option value="toshshahar">Toshkent shahar</option>
                     </select>
-                    <select name="kurs" id="kursRuyxat"></select>
-                    <select name="manba" id="qayerdantopdi"></select>
+                    <select class="mx-2" name="kurs" id="kursRuyxat"></select>
+                    <select class="ml-2" name="manba" id="qayerdantopdi"></select>
                 </form>
             </nav>
-            <header class="header">
-                <div class="left">
-                    <button type="menu" class="btn btn-succes">O'quvchilar ro'yxati</button>
-                    <button type="menu" class="btn btn-succes">Kurslar ro'yxati</button>
-                    <button type="menu" class="btn btn-succes">Manbalar ro'yxati</button>
+            <header class="header d-flex justify-content-between">
+                <div class="left d-flex flex-column align-items-center justify-content-center">
+                    <button type="menu" class="btn btn-success w-75">O'quvchilar ro'yxati</button>
+                    <button type="menu" class="btn btn-success w-75 my-4">Kurslar ro'yxati</button>
+                    <button type="menu" class="btn btn-success w-75">Manbalar ro'yxati</button>
                 </div>
                 <div class="right">
                     <div class="oquvchi__ruyxati">
-                        <form action="post">
-                            <input type="text">
-                            <button>add</button>
-                        </form>
+                        
                         <ul class="list-oquvchi"></ul>
                         
                     </div>
-                    <div class="kurs__ruyxati">
+                    <div class="kurs__ruyxati d-none">
                         <form action="post">
                             <input type="text">
                             <button>add</button>
                         </form>
                         <ul class="list-kurs"></ul>
                     </div>
-                    <div class="manba__ruyxati">
+                    <div class="manba__ruyxati d-none">
                         <form action="post">
                             <input type="text">
                             <button>add</button>
@@ -72,7 +69,7 @@
         </div>
     </section>
     
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="../public/main.js"></script>
 </body>
 </html>

@@ -25,6 +25,7 @@ module.exports = class Database{
             id: Math.random().toString(32).substring(2),
             name,
         }
+        this.kursdata.push(kdata)
         await fs.writeFile(this.kurspath, JSON.stringify({kursdata:this.kursdata}))
          return kdata
     }
