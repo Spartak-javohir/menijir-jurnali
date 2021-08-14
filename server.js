@@ -12,6 +12,10 @@ const kdb = new kursdatabase()
  app.listen(3030, ()=>{
      console.log('app running at 3030 port');
  })
+ app.use(express.urlencoded({
+     extended: true,
+ }))
+app.use(express.json())
 
  app.use(express.static(__dirname+'/public'))
  app.get('/', async (req, res)=>{
@@ -20,10 +24,14 @@ const kdb = new kursdatabase()
  })
 
  app.get('/baz', async (req, res)=>{
-    let data = await kdb.readkursfile();
+     await kdb.addData('it')
+    let kursdata = await kdb.readkursfile();
     res.json({
-        data: kursdata
+        kursdata: kursdata
     })
  }
- )
+)
+app.post("/add_kurs", async (req, res)=>{
+    console.log(res.body);
+})
  
