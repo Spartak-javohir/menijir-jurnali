@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Spartak-javohir/menijir-jurnali/issues"
   },
-  "homepage": "https://github.com/Spartak-javohir/menijir-jurnali#readme"
+  "homepage": "https://github.com/Spartak-javohir/menijir-jurnali#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
