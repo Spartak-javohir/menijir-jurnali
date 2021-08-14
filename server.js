@@ -16,7 +16,6 @@ const kdb = new kursdatabase()
  app.use(express.static(__dirname+'/public'))
  app.get('/', async (req, res)=>{
     let reed = await fs.readFile(__dirname+'/views/index.html', 'utf-8')
-    
     res.send(reed)
  })
  
