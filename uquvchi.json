@@ -1,13 +1,1 @@
-{
-    "uquvchidata":[
-        {
-            "id":1,
-            "name": "Bilol",
-            "fullname":"Axrorov",
-            "age": 19,
-            "viloyat": "Andijon",
-            "kurs": "dizayner",
-            "manba": "instagram"
-        }
-    ]
-}
+{"uquvchidata":"/home/javohir/Documents/backend/menijr/uquvchi.json"}

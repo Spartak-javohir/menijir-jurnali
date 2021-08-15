@@ -12,13 +12,18 @@ module.exports = class Uquvdatabase{
        let uquvchidata = await fs.readFile(this.uquvchipath, 'utf-8')
        uquvchidata = await JSON.parse(uquvchidata)
         this.uquvchidata = uquvchidata.uquvchidata
-        return uquvchidata.uquvchidata
+         console.log(uquvchidata.uquvchidata)
         
     }
-    async addData(){
+    async addData(name, surname, age, viloyat, kurs, manba){
         let udata= {
-            id: udata.length+1,
-            name,
+            id: this.uquvchidata.length+1,
+            name: name,
+            surname: surname,
+            age: age,
+            viloyat: viloyat,
+            kurs: kurs,
+            manba: manba
         }
         this.uquvchidata.push(udata)
         await fs.writeFile(this.uquvchipath, JSON.stringify({uquvchidata:this.uquvchipath}))

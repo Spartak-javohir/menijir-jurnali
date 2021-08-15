@@ -6,7 +6,8 @@ const uquvdatabase = require('./moduls/uquvdatabase')
 
 
 const udb = new uquvdatabase()
-// const kdb = new kursdatabase()
+const kdb = new kursdatabase()
+// console.log(udb.addData('javohir', 'abdujalilov', 21, 'buxoro', 'web developer', 'instagram'));
 
 
 
