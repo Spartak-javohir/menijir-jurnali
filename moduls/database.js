@@ -50,13 +50,13 @@ module.exports = class Database{
         //   return udata.udata
          
      }
-     async adduData(name, age, kurs, manba){
+     async adduData(){
          let udata= {
              id: this.udata.length+1,
-             name: name,
-             age: age,
-             kurs: kurs,
-             manba: manba
+              name: '',
+              age: '',
+             kurs: '',
+              manba: ''
          }
          this.udata.push(udata)
          await fs.writeFile(this.upath, JSON.stringify({udata:this.upath}))
