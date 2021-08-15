@@ -8,20 +8,34 @@
     
 </head>
 <body>
-   <section class="section">
-       <div class="container">
-           <nav class="navbar">
+    <section class="section">
+        <div class="container">
+            <nav class="navbar">
                <form action="">
                    <input class="add__popul__input" type="text" required placeholder="ismingiz">
 
                    <input class="add__popul__age" type="number" required name="age" id="ageInput" placeholder="necha yosh" >
 
-                   <select name="kusrlar" id="selectKursElem" class="select__kurs"></select>
-                   <select name="manbalar" id="selectManbaElem" class="select__manba"></select>
+                   <select  class="select__kurs" name="kusrlar" id="selectKursElem"></select>
+                   <select class="select__manba" name="manbalar" id="selectManbaElem" ></select>
                </form>
-           </nav>
-       </div>
-   </section>
+            </nav>
+            <div class="manager__list__body">
+                <div class="left">
+                    <button class="list__popul">ro'yxat</button>
+                    <button class="add__kurs">kurslarga qo'shish</button>
+                    <button class="add__manba">manbalarga qo'shish</button>
+                </div>
+                <div class="right">
+                    <ul class="lists">
+                        <li class="item__element"></li>
+                        <li class="item__element"></li>
+                        <li class="item__element"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     
      
     
