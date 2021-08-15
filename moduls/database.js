@@ -6,7 +6,7 @@ const path = require('path')
 module.exports = class Database{
     constructor(){
         // kurslar uchun
-        this.kurspath = path.join(__dirname, '..', '/routs', '/kurs.json')
+        this.kpath = path.join(__dirname, '..', '/routs', '/kurs.json')
         this.kdata = []
         this.readkfile()
 
@@ -16,21 +16,21 @@ module.exports = class Database{
         this.readufile()
 
         // manbalar uchun
-        // this.manbapath = path.join(__dirname, '..', '/routs', '/qayer.json')
-        // this.mdata = []
-        // this.readmfile()
+        this.mpath = path.join(__dirname, '..', '/routs', '/qayer.json')
+        this.mdata = []
+        this.readmfile()
         
 
     }
         // kurs class
     async readkfile(){
-        let kursdata = await fs.readFile(this.kurspath, 'utf-8')
-        kursdata = await JSON.parse(kursdata)
-        this.kursdata = kursdata.kursdata
-        return kursdata.kursdata
+        let kdata = await fs.readFile(this.kpath, 'utf-8')
+        kdata = await JSON.parse(kdata)
+        this.kdata = kdata.kdata
+        return kdata.kdata
         
     }
-    async addData(){
+    async addkData(){
         let kdata= {
             id: Math.random().toString(32).substring(2),
             name,
@@ -46,21 +46,39 @@ module.exports = class Database{
         let udata = await fs.readFile(this.upath, 'utf-8')
         udata = await JSON.parse(udata)
          this.udata = udata.udata
-          console.log(udata.udata)
+            console.log(this.upath);
+        //   return udata.udata
          
      }
-     async addData(name, surname, age, viloyat, kurs, manba){
-         let udata= [{
+     async adduData(name, age, kurs, manba){
+         let udata= {
              id: this.udata.length+1,
              name: name,
-             surname: surname,
              age: age,
-             viloyat: viloyat,
              kurs: kurs,
              manba: manba
-         }]
+         }
          this.udata.push(udata)
          await fs.writeFile(this.upath, JSON.stringify({udata:this.upath}))
           return udata
-     }
+    }
+
+    // manba class
+
+    async readmfile(){
+        let mdata = await fs.readFile(this.mpath, 'utf-8')
+        mdata = await JSON.parse(mdata)
+        this.mdata = mdata.mdata
+        return mdata.mdata
+        
+    }
+    async addmData(){
+        let mdata= {
+            id: Math.random().toString(32).substring(2),
+            name,
+        }
+        this.mdata.push(mdata)
+        await fs.writeFile(this.mpath, JSON.stringify({mdata:this.mdata}))
+         return mdata
+    }
 }
