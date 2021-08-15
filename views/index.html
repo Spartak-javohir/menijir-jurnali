@@ -5,29 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>manager list</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/public/style.css"> -->
 </head>
 <body>
     <section class="section">
         <div class="container">
             <nav class="navbar">
-               <form action="">
-                   <input class="add__popul__input" type="text" required placeholder="ismingiz">
+               <form class="form" id="form" action="">
+                   <input class="add__popul__input input" type="text" required placeholder="ismingiz">
 
-                   <input class="add__popul__age" type="number" required name="age" id="ageInput" placeholder="necha yosh" >
+                   <input class="add__popul__age input" type="number" required name="age" id="ageInput" placeholder="necha yosh" >
 
-                   <select  class="select__kurs" name="kusrlar" id="selectKursElem"></select>
-                   <select class="select__manba" name="manbalar" id="selectManbaElem" ></select>
+                   <select  class="select__kurs select" name="kusrlar" id="selectKursElem"></select>
+                   <select class="select__manba select" name="manbalar" id="selectManbaElem" ></select>
+                   <button class="add__populs__button btn btn-primary" id="add">add</button>
                </form>
             </nav>
-            <div class="manager__list__body">
-                <div class="left">
-                    <button class="list__popul">ro'yxat</button>
-                    <button class="add__kurs">kurslarga qo'shish</button>
-                    <button class="add__manba">manbalarga qo'shish</button>
+            <div class="manager__list__body d-flex">
+                <div class="left d-flex flex-column">
+                    <button class="list__popul btn btn-success">ro'yxat</button>
+                    <button class="add__kurs btn btn-success my-4">kurslarga qo'shish</button>
+                    <button class="add__manba btn btn-success">manbalarga qo'shish</button>
                 </div>
                 <div class="right">
-                    <ul class="lists">
+                    <ul class="lists list">
                         <li class="item__element"></li>
                         <li class="item__element"></li>
                         <li class="item__element"></li>
@@ -36,8 +38,22 @@
             </div>
         </div>
     </section>
+
+
+
     
-     
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="">
+    const formElement = document.querySelector("#form")
+    const addStudentInput = document.querySelector(".add__popul__input")
+    const addButton = document.querySelector("#add")
+
+    formElement.addEventListener("click", event => {
+    event.preventDefault()
+     console.log(event);
+
+    })
+
+    </script>
 </body>
 </html>
