@@ -4,7 +4,6 @@ const kursdatabase = require('./moduls/database')
 
 
 
-const udb = new uquvdatabase()
 const kdb = new kursdatabase()
 // console.log(udb.addData('javohir', 'abdujalilov', 21, 'buxoro', 'web developer', 'instagram'));
 
@@ -12,7 +11,7 @@ const kdb = new kursdatabase()
 
  const app = express();
 
- app.listen(3060, ()=>{
+ app.listen(3050, ()=>{
      console.log('app running port');
     //  console.log(__dirname, + "/public")
  })
