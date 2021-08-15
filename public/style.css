@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -26,18 +22,6 @@ a {
   margin-top: 50px;
 }
 
-.section .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .section .navbar form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,18 +29,60 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.section .navbar form .input__div {
+.section .navbar form input {
+  margin: 10px;
+  margin-left: 0;
+}
+
+.section .navbar form .add__popul__age {
+  margin: 10px;
+}
+
+.section .navbar form select {
+  margin: 10px;
+}
+
+.section .navbar form button {
+  margin: 10px;
+}
+
+.section .manager__list__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.section .main tr, .section th, .section td {
+  border: 1px solid black;
+}
+
+.section .main th {
+  font-size: 25px;
+  padding: 10px 20px;
+}
+
+.section .main td {
+  font-size: 20px;
+  padding: 7px 15px;
+}
+
+.section .main table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
+.section .main td button {
+  padding: 8px 20px;
 }
 /*# sourceMappingURL=style.css.map */

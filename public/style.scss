@@ -3,9 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: black;
-}
+
+
 ol, ul{
     list-style: none;
 }
@@ -23,18 +22,61 @@ a{
     margin-top: 50px;
     
     .navbar{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        
         form{
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
 
-            .input__div{
-                display: flex; 
-                flex-direction: column;
+            input{
+                margin: 10px;
+                margin-left:0;
+            }
+            .add__popul__age{
+                margin: 10px;
+            }
+            select{
+                margin: 10px;
+            }
+            button{
+                margin: 10px;
             }
         }
     }
+    .manager__list__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        
+        // .main{
+        //     width: 65%;
+        //     margin-left: 100px;
+        //     margin-top: 50px;
+        }
+        
+        .main tr, th, td{
+            border: 1px solid black;
+            
+        }
+        .main th{
+            font-size: 25px;
+            padding: 10px 20px;
+        }
+        
+        .main td{
+            font-size: 20px;
+            padding: 7px 15px;
+        }
+        
+        .main table{
+            
+            border-collapse: collapse;
+            width: 90%;
+        }
+        
+        .main td button{
+            padding: 8px 20px;
+        }
+    // }
 }
