@@ -1,7 +1,6 @@
 const express = require('express')
 const fs = require('fs').promises
 const kursdatabase = require('./moduls/database')
-const uquvdatabase = require('./moduls/uquvdatabase')
 
 
 
@@ -29,15 +28,5 @@ app.use(express.json())
     res.send(reed)
  })
 
-//  app.get('/baz', async (req, res)=>{
-//     let kursdata = await kdb.readkursfile();
-//     res.json({
-//         kursdata: kursdata
-//     })
-//  }
-// )
-// app.post("/add_kurs", async (req, res)=>{
-//     const add_kurs = await udb.addData(req.body)
 
-// })
  
