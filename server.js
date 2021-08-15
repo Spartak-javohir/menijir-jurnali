@@ -28,7 +28,6 @@ app.use(express.json())
  })
 
  app.get('/baz', async (req, res)=>{
-     await kdb.addData('it')
     let kursdata = await kdb.readkursfile();
     res.json({
         kursdata: kursdata
