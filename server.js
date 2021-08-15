@@ -12,8 +12,9 @@ const kdb = new kursdatabase()
 
 
  const app = express();
- app.listen(3030, ()=>{
-     console.log('app running at 3030 port');
+
+ app.listen(4000, ()=>{
+     console.log('app running at 4000 port');
  })
  app.use(express.urlencoded({
      extended: true,
@@ -34,7 +35,8 @@ app.use(express.json())
     })
  }
 )
-app.post("/add_kurs", async (req, res)=>{
-    console.log(req.body);
-})
+// app.post("/add_kurs", async (req, res)=>{
+//     const add_kurs = await udb.addData(req.body)
+
+// })
  

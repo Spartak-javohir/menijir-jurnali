@@ -1,14 +1,9 @@
-const Uquvdatabase = require("../moduls/uquvdatabase")
+const formElement = document.querySelector("#form")
+const addStudentInput = document.querySelector(".add__student")
+const addButton = document.querySelector("#add")
 
-window.addEventListener("DOMContentLoaded", event=>{
-    uquvchiadd()
+addButton.addEventListener("click", event => {
+    event.preventDefault()
+   console.log(event);
+
 })
-
-async function uquvchiadd(){
-    let response = await fetch("/add-popul", {
-        method: "GET",
-    })
-    response = await response.json()
-
-    console.log(response);
-}

@@ -16,7 +16,7 @@ module.exports = class Uquvdatabase{
         
     }
     async addData(name, surname, age, viloyat, kurs, manba){
-        let udata= {
+        let udata= [{
             id: this.uquvchidata.length+1,
             name: name,
             surname: surname,
@@ -24,7 +24,7 @@ module.exports = class Uquvdatabase{
             viloyat: viloyat,
             kurs: kurs,
             manba: manba
-        }
+        }]
         this.uquvchidata.push(udata)
         await fs.writeFile(this.uquvchipath, JSON.stringify({uquvchidata:this.uquvchipath}))
          return udata
