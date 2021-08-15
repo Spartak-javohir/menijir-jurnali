@@ -35,6 +35,6 @@ app.use(express.json())
  }
 )
 app.post("/add_kurs", async (req, res)=>{
-    console.log(res.body);
+    console.log(req.body);
 })
  
