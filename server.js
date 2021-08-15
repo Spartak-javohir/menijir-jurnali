@@ -13,7 +13,7 @@ const kdb = new kursdatabase()
 
  const app = express();
 
- app.listen(3033, ()=>{
+ app.listen(3060, ()=>{
      console.log('app running port');
     //  console.log(__dirname, + "/public")
  })

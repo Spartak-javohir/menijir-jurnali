@@ -4,6 +4,6 @@ const addButton = document.querySelector("#add")
 
 addButton.addEventListener("click", event => {
     event.preventDefault()
-   console.log(event);
+   
 
 })
