@@ -13,8 +13,9 @@ const kdb = new kursdatabase()
 
  const app = express();
 
- app.listen(4000, ()=>{
-     console.log('app running at 4000 port');
+ app.listen(3033, ()=>{
+     console.log('app running port');
+    //  console.log(__dirname, + "/public")
  })
  app.use(express.urlencoded({
      extended: true,
@@ -22,18 +23,19 @@ const kdb = new kursdatabase()
 app.use(express.json())
 
  app.use(express.static(__dirname+'/public'))
+
  app.get('/', async (req, res)=>{
-    let reed = await fs.readFile(__dirname+'/views/index.html', 'utf-8')
+    let reed = await fs.readFile(__dirname+'/views/index.html', "utf-8")
     res.send(reed)
  })
 
- app.get('/baz', async (req, res)=>{
-    let kursdata = await kdb.readkursfile();
-    res.json({
-        kursdata: kursdata
-    })
- }
-)
+//  app.get('/baz', async (req, res)=>{
+//     let kursdata = await kdb.readkursfile();
+//     res.json({
+//         kursdata: kursdata
+//     })
+//  }
+// )
 // app.post("/add_kurs", async (req, res)=>{
 //     const add_kurs = await udb.addData(req.body)
 
