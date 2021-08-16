@@ -162,7 +162,6 @@ async function manbalar(){
         method: "GET",
     });
     mrespon = await mrespon.json()
- 
     rendermanba(mrespon.mdata);
     
 }
