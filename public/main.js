@@ -75,7 +75,7 @@ function renderStudents(arr){
       
         tbodyElem.appendChild(trElem)
         buttonDeleteElem.addEventListener('click', async event=>{
-            console.log(buttonDeleteElem.parrent);
+            console.log();
         })
     }
 }
@@ -101,7 +101,6 @@ kform.addEventListener("click", async event => {
     })
    })
    kresponse = await kresponse.json()
-   console.log(addKursInputElem.value);
    kurslar()
 });
 
@@ -118,10 +117,8 @@ function renderkurs(arr){
     for (let i of arr){
         const optionElem = document.createElement('option')
         const delbtnElm = document.createElement('button')
-
-        optionElem.textContent= i.name
         optionElem.appendChild(delbtnElm)
+        optionElem.textContent= i.name
         selectKursElem.appendChild(optionElem)
-        console.log(i);
     }
 }
