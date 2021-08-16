@@ -152,9 +152,6 @@ mform.addEventListener("submit", async event => {
    })
    mresponse = await mresponse.json()
    manbalar()
-
-
-   
 });
 
 async function manbalar(){
