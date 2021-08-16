@@ -30,33 +30,10 @@
                 </div>
                 <div class="right">
                     <ul class="lists list">
-                        <li class="item__element_active main">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Ism Familiya</th>
-                                            <th>Yoshi</th>
-                                            <th>Kurs nomi</th>
-                                            <th>Manzili</th>
-                                            <th>delete</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>hjfrfusfk</td>
-                                            <td>knfsjfr</td>
-                                            <td>djvjsvsjdnc</td>
-                                            <td>djvjsvsjdnc</td>
-                                            <td> <button>remove</button></td>
-                                            
-                                        </tr>
-                                    </tbody>
-                                </table>
-                        </li>
                         <li class="item__element__kurs">
-                            <form action="">
-                                <input type="text" required placeholder="kurs nomi">
-                                <button>qo'shish</button>
+                            <form action="/kform">
+                                <input id="kursInputElem" type="text" required placeholder="kurs nomi">
+                                <button id="kaddBtnElem">qo'shish</button>
                             </form>
                         </li>
                         <li class="item__element__manba">
@@ -65,6 +42,24 @@
                                 <button>qo'shish</button>
                             </form>
                         </li>
+                        <li class="item__element_active main">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Ism Familiya</th>
+                                            <th>Yoshi</th>
+                                            <th>Kurs nomi</th>
+                                            <th>Manba</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody">
+                                        
+                                    </tbody>
+                                </table>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>

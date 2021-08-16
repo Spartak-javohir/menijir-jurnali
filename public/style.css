@@ -63,26 +63,87 @@ a {
           align-items: flex-start;
 }
 
-.section .main tr, .section th, .section td {
+.section tr, .section th, .section td {
   border: 1px solid black;
 }
 
-.section .main th {
+.section th {
   font-size: 25px;
   padding: 10px 20px;
 }
 
-.section .main td {
+.section td {
   font-size: 20px;
   padding: 7px 15px;
 }
 
-.section .main table {
+.section table {
   border-collapse: collapse;
   width: 90%;
 }
 
-.section .main td button {
+.section td button {
   padding: 8px 20px;
+  border-radius: 5px;
+  background-color: red;
+  border: none;
+}
+
+.section .item__element__kurs {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 20;
+  width: 50%;
+  background-color: rgba(255, 218, 7, 0.5);
+  height: 100px;
+  border-radius: 10px;
+}
+
+.section .item__element__kurs button {
+  border: none;
+  background-color: #1eff00;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.section .item__element__kurs input {
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.section .item__element__manba {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 20;
+  width: 50%;
+  background-color: rgba(255, 218, 7, 0.5);
+  height: 100px;
+  border-radius: 10px;
+}
+
+.section .item__element__manba button {
+  border: none;
+  background-color: #1eff00;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.section .item__element__manba input {
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */

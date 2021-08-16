@@ -5,7 +5,7 @@ const egaelem = document.querySelector('#ageInput')
 const selectKursElem = document.querySelector("#selectKursElem")
 const selectManbaElem = document.querySelector("#selectManbaElem")
 const itemElemenActive = document.querySelector('.item__element_active')
-const tableElem = document.querySelector('.table')
+const tbodyElem = document.querySelector('.tbody')
 
 addButton.addEventListener("click", async event => {
     event.preventDefault()
@@ -24,8 +24,7 @@ addButton.addEventListener("click", async event => {
 
 
 
-window.addEventListener("DomContentLoaded", e=>{
-
+window.addEventListener("DOMContentLoaded", async e=>{ 
 
     students()
 
@@ -44,51 +43,55 @@ window.addEventListener("DomContentLoaded", e=>{
 
 function renderStudents(arr){
     for (let i of arr){
-        const theadElem = document.createElement('thead')
+        
         const trElem = document.createElement('tr')
-        const trElem1 = document.createElement('tr')
-        const tbodyElem = document.createElement('thead')
-        const tdElem = document.createElement('thead')
-        const tdElem1 = document.createElement('thead')
-        const tdElem2 = document.createElement('thead')
-        const tdElem3 = document.createElement('thead')
-        const tdElem4 = document.createElement('thead')
-        const thElem = document.createElement('thead')
-        const thElem1 = document.createElement('thead')
-        const thElem2 = document.createElement('thead')
-        const thElem3 = document.createElement('thead')
-        const thElem4 = document.createElement('thead')
+        const tdElem = document.createElement('td')
+        const tdElem1 = document.createElement('td')
+        const tdElem2 = document.createElement('td')
+        const tdElem3 = document.createElement('td')
+        const tdElem4 = document.createElement('td')
+        const tdElem5 = document.createElement('td')
         const buttonDeleteElem = document.createElement('button')
 
-
-        theadElem.appendChild(trElem)
-        tbodyElem.appendChild(trElem1)
-        trElem.appendChild(thElem)
-        trElem.appendChild(thElem1)
-        trElem.appendChild(thElem2)
-        trElem.appendChild(thElem3)
-        trElem.appendChild(thElem4)
-        trElem1.appendChild(tdElem)
-        trElem1.appendChild(tdElem1)
-        trElem1.appendChild(tdElem2)
-        trElem1.appendChild(tdElem3)
-        trElem1.appendChild(tdElem4)
-
-        thElem.textContent = 'Ism'
-        thElem1.textContent = 'Yoshi'
-        thElem2.textContent = 'Kurs nomi'
-        thElem3.textContent = 'Manda'
-        thElem4.textContent = 'Action'
-
+         
         tdElem.textContent = i.name
-        tdElem1.textContent = i.ega
+        tdElem1.textContent = i.age
         tdElem2.textContent = i.kurs
         tdElem3.textContent = i.manba
-        tdElem4.appendChild(buttonDeleteElem)
+        tdElem5.textContent = i.id
+        
+        trElem.appendChild(tdElem5)
+        trElem.appendChild(tdElem)
+        trElem.appendChild(tdElem1)
+        trElem.appendChild(tdElem2)
+        trElem.appendChild(tdElem3) 
+        trElem.appendChild(tdElem4)
         buttonDeleteElem.textContent = 'delete'
 
-        tableElem.appendChild(theadElem)
-        tableElem.appendChild(tbodyElem)
+       
+        tdElem4.appendChild(buttonDeleteElem)
+      
+        tbodyElem.appendChild(trElem)
+        console.log(i.age);
+           
 
     }
 }
+
+// kurslar bolimi
+const addursInputElem = document.querySelector("#kursInputElem")
+const kaddBtnElem = document.querySelector("#kaddBtnElem")
+
+
+kaddBtnElem.addEventListener("click", async event => {
+    event.preventDefault()
+   let kresponse = await fetch("/kform",      {
+    headers: {"Content-Type": "application/json",},
+       method: "POST",
+
+       body: JSON.stringify({
+        name: addKursInputElem.value,
+        
+       })
+   })
+});
