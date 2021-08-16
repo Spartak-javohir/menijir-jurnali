@@ -130,7 +130,52 @@ function renderkurs(arr){
         optionElem.appendChild(delbtnElm)
         optionElem.textContent= i.name
         selectKursElem.appendChild(optionElem)
-        console.log(i);
         addKursInputElem.value = ""
+    }
+}
+
+
+// manbalar bolimi
+const mform = document.querySelector("#mform")
+const minput = document.querySelector("#minput")
+
+mform.addEventListener("submit", async event => {
+    event.preventDefault()
+   let mresponse = await fetch("/mform",      {
+    headers: {"Content-Type": "application/json",},
+    method: "POST",
+
+    body: JSON.stringify({
+        name: minput.value,
+  
+    })
+   })
+   mresponse = await mresponse.json()
+   manbalar()
+
+
+   
+});
+
+async function manbalar(){
+    let mrespon = await fetch("/manbalar",{
+        method: "GET",
+    });
+    mrespon = await mrespon.json()
+ 
+    rendermanba(mrespon.mdata);
+    
+}
+
+function rendermanba(arr){
+    selectManbaElem.innerHTML = ""
+    for (let i of arr){
+        
+        const moptionElem = document.createElement('option')
+        const mdelbtnElm = document.createElement('button')
+        moptionElem.appendChild(mdelbtnElm)
+        moptionElem.textContent= i.name
+        selectManbaElem.appendChild(moptionElem)
+        minput.value = ""
     }
 }
