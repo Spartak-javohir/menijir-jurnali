@@ -38,6 +38,9 @@ app.use(express.json())
      res.json(dbbody)
   
  })
+
+
+
 // kurslar bolimi
  app.get("/kurslar", async (req, res)=>{
     let kdata = await db.readkfile();
@@ -49,6 +52,6 @@ app.post("/kform", async (req, res)=>{
    
     let dbkbody = await db.addkData(req.body.name)
     res.json(dbkbody)
- 
+
 })
  

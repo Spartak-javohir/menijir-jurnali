@@ -20,6 +20,8 @@ addButton.addEventListener("click", async event => {
         manba: selectManbaElem.value
        })
    })
+   response = await response.json()
+   students()
 });
 
 
@@ -27,23 +29,24 @@ addButton.addEventListener("click", async event => {
 window.addEventListener("DOMContentLoaded", async e=>{ 
 
     students()
+    kurslar()
+
 
 })
 
 
- async function students(){
+async function students(){
      let respon = await fetch("/manager",{
          method: "GET",
      });
      respon = await respon.json()
-  
      renderStudents(respon.udata);
      
 }
 
 function renderStudents(arr){
     for (let i of arr){
-        
+
         const trElem = document.createElement('tr')
         const tdElem = document.createElement('td')
         const tdElem1 = document.createElement('td')
@@ -67,31 +70,58 @@ function renderStudents(arr){
         trElem.appendChild(tdElem3) 
         trElem.appendChild(tdElem4)
         buttonDeleteElem.textContent = 'delete'
-
        
         tdElem4.appendChild(buttonDeleteElem)
       
         tbodyElem.appendChild(trElem)
-        console.log(i.age);
-           
-
+        buttonDeleteElem.addEventListener('click', async event=>{
+            console.log(buttonDeleteElem.parrent);
+        })
     }
 }
 
+
+
 // kurslar bolimi
-const addursInputElem = document.querySelector("#kursInputElem")
+const addKursInputElem = document.querySelector("#kursInputElem")
 const kaddBtnElem = document.querySelector("#kaddBtnElem")
+const kform = document.querySelector("#kform")
 
 
-kaddBtnElem.addEventListener("click", async event => {
+
+kform.addEventListener("click", async event => {
     event.preventDefault()
    let kresponse = await fetch("/kform",      {
     headers: {"Content-Type": "application/json",},
-       method: "POST",
+    method: "POST",
 
-       body: JSON.stringify({
+    body: JSON.stringify({
         name: addKursInputElem.value,
-        
-       })
+  
+    })
    })
+   kresponse = await kresponse.json()
+   console.log(addKursInputElem.value);
+   kurslar()
 });
+
+async function kurslar(){
+    let krespon = await fetch("/kurslar",{
+        method: "GET",
+    });
+    krespon = await krespon.json()
+ 
+    renderkurs(krespon.kdata);
+    
+}
+function renderkurs(arr){
+    for (let i of arr){
+        const optionElem = document.createElement('option')
+        const delbtnElm = document.createElement('button')
+
+        optionElem.textContent= i.name
+        optionElem.appendChild(delbtnElm)
+        selectKursElem.appendChild(optionElem)
+        console.log(i);
+    }
+}

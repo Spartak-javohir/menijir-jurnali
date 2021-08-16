@@ -13,7 +13,7 @@
         <div class="container">
             <nav class="navbar">
                <form class="form" id="form" action="/uform">
-                   <input class="add__popul__input input" type="text" required placeholder="ismingiz">
+                   <input class="add__popul__input input" min:1 type="text" required placeholder="ismingiz">
 
                    <input class="add__popul__age input" type="number" required name="age" id="ageInput" placeholder="necha yosh" >
 
@@ -31,7 +31,7 @@
                 <div class="right">
                     <ul class="lists list">
                         <li class="item__element__kurs">
-                            <form action="/kform">
+                            <form id="kform" action="/kform">
                                 <input id="kursInputElem" type="text" required placeholder="kurs nomi">
                                 <button id="kaddBtnElem">qo'shish</button>
                             </form>

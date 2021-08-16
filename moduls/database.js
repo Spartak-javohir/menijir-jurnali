@@ -30,10 +30,10 @@ module.exports = class Database{
         return kdata.kdata
         
     }
-    async addkData(){
+    async addkData(name){
         let kdata= {
             id: Math.random().toString(32).substring(2),
-            name,
+            name
         }
         this.kdata.push(kdata)
         await fs.writeFile(this.kpath, JSON.stringify({kdata:this.kdata}))
