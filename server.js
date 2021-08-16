@@ -25,13 +25,16 @@ app.use(express.json())
     let reed = await fs.readFile(__dirname+'/views/index.html', "utf-8")
     res.send(reed)
  })
- app.get("/uform", async (req, res)=>{
-     let x= await db.adduData('salom')
-     console.log(x);
+ app.get("/manager", async (req, res)=>{
      let udata = await db.readufile();
      res.json({
          udata: udata
      })
+ })
+
+ app.post("/uform", async (req, res)=>{
+    let name = await db.adduData(req.body.name)
+    console.log(name);
  })
 
 

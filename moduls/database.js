@@ -60,7 +60,7 @@ module.exports = class Database{
         }
         this.udata.push(udata)
         
-        await fs.writeFile(this.upath, JSON.stringify({udata:this.upath}))
+        await fs.writeFile(this.upath, JSON.stringify({udata:this.udata}))
         
         return udata
     }
