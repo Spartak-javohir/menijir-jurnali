@@ -71,11 +71,15 @@ function renderStudents(arr){
         trElem.appendChild(tdElem4)
         buttonDeleteElem.textContent = 'delete'
        
-        tdElem4.appendChild(buttonDeleteElem)
-      
+        tdElem4.appendChild(buttonDeleteElem)      
         tbodyElem.appendChild(trElem)
+
+        addStudentInput.value = ""
+        egaelem.value = ""
+
+
         buttonDeleteElem.addEventListener('click', async event=>{
-            console.log();
+            
         })
     }
 }
@@ -89,7 +93,7 @@ const kform = document.querySelector("#kform")
 
 
 
-kform.addEventListener("click", async event => {
+kform.addEventListener("submit", async event => {
     event.preventDefault()
    let kresponse = await fetch("/kform",      {
     headers: {"Content-Type": "application/json",},
@@ -102,6 +106,9 @@ kform.addEventListener("click", async event => {
    })
    kresponse = await kresponse.json()
    kurslar()
+
+
+   
 });
 
 async function kurslar(){
@@ -113,7 +120,9 @@ async function kurslar(){
     renderkurs(krespon.kdata);
     
 }
+
 function renderkurs(arr){
+    selectKursElem.innerHTML = ""
     for (let i of arr){
         
         const optionElem = document.createElement('option')
@@ -121,8 +130,7 @@ function renderkurs(arr){
         optionElem.appendChild(delbtnElm)
         optionElem.textContent= i.name
         selectKursElem.appendChild(optionElem)
-
-        selectKursElem.innerHTML = ""
-
+        console.log(i);
+        addKursInputElem.value = ""
     }
 }
