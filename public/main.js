@@ -169,7 +169,6 @@ async function manbalar(){
 function rendermanba(arr){
     selectManbaElem.innerHTML = ""
     for (let i of arr){
-        
         const moptionElem = document.createElement('option')
         const mdelbtnElm = document.createElement('button')
         moptionElem.appendChild(mdelbtnElm)
