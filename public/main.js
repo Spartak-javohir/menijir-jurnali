@@ -115,10 +115,14 @@ async function kurslar(){
 }
 function renderkurs(arr){
     for (let i of arr){
+        
         const optionElem = document.createElement('option')
         const delbtnElm = document.createElement('button')
         optionElem.appendChild(delbtnElm)
         optionElem.textContent= i.name
         selectKursElem.appendChild(optionElem)
+
+        selectKursElem.innerHTML = ""
+
     }
 }
