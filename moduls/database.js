@@ -74,7 +74,7 @@ module.exports = class Database{
         return mdata.mdata
         
     }
-    async addmData(){
+    async addmData(name){
         let mdata= {
             id: Math.random().toString(32).substring(2),
             name,

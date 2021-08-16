@@ -33,8 +33,10 @@ app.use(express.json())
  })
 
  app.post("/uform", async (req, res)=>{
-    let name = await db.adduData(req.body.name, req.body.age, req.body.kurs, req.body.manba)
-    console.log(req.body);
+     let name = req.body.name
+    let dbbody = await db.adduData(name, req.body.age, req.body.kurs, req.body.manba)
+     res.json(dbbody)
+     console.log(req.body);
  })
 
 
