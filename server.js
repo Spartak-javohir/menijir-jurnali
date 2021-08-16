@@ -54,4 +54,19 @@ app.post("/kform", async (req, res)=>{
     res.json(dbkbody)
 
 })
+
+
+// manba bolimi
+app.get("/manbalar", async (req, res)=>{
+    let mdata = await db.readmfile();
+    res.json({
+        mdata: mdata
+    })
+})
+app.post("/mform", async (req, res)=>{
+   
+    let dbmbody = await db.addmData(req.body.name)
+    res.json(dbmbody)
+
+})
  
