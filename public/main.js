@@ -36,15 +36,32 @@ window.addEventListener("DomContentLoaded", e=>{
          method: "GET",
      });
      respon = await respon.json()
+  
      renderStudents(respon.udata);
+     
 }
 
 function renderStudents(arr){
     for (let i of arr){
         const theadElem = document.createElement('thead')
         const trElem = document.createElement('tr')
+        const trElem1 = document.createElement('tr')
         const tbodyElem = document.createElement('thead')
         const tdElem = document.createElement('thead')
+        const thElem = document.createElement('thead')
+        const thElem1 = document.createElement('thead')
+        const thElem2 = document.createElement('thead')
+        const thElem3 = document.createElement('thead')
+        const thElem4 = document.createElement('thead')
+
+
+        theadElem.appendChild(trElem)
+        tbodyElem.appendChild(trElem1)
+        trElem.appendChild(thElem)
+        trElem.appendChild(thElem1)
+        trElem.appendChild(thElem2)
+        trElem.appendChild(thElem3)
+        trElem.appendChild(thElem4)
 
     }
 }
