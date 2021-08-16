@@ -46,8 +46,8 @@ module.exports = class Database{
         let udata = await fs.readFile(this.upath, 'utf-8')
         udata = await JSON.parse(udata)
          this.udata = udata.udata
-            console.log(this.upath);
-        //   return udata.udata
+            // console.log(this.upath);
+          return udata.udata
          
      }
      async adduData(name, age, kurs, manba){
