@@ -26,7 +26,7 @@ app.use(express.json())
     res.send(reed)
  })
  app.get("/uform", async (req, res)=>{
-     let x= await db.adduData('javohir', 'abdjalilov', 21, 'buxoro', 'web dasturlash', 'instagram')
+     let x= await db.adduData('salom')
      console.log(x);
      let udata = await db.readufile();
      res.json({
