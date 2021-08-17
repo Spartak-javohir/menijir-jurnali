@@ -5,7 +5,6 @@ const kursdatabase = require('./moduls/database')
 
 
 const db = new kursdatabase()
-// console.log(udb.addData('javohir', 'abdujalilov', 21, 'buxoro', 'web developer', 'instagram'));
 
 
 
@@ -76,4 +75,5 @@ app.delete("/delete/:id", async (req, res)=>{
     res.json({
         ok: true,
     })
+    
 })

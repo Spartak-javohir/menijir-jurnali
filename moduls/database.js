@@ -52,7 +52,7 @@ module.exports = class Database{
      }
      async adduData(name, age, kurs, manba){
          let udata= {
-            id: this.udata.length+1,
+            id: Math.random().toString(32).substring(2),
             name,
             age,
             kurs,

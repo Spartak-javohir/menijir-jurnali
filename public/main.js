@@ -104,6 +104,7 @@ function renderStudents(arr){
                 method: "DELETE",
                 
             })
+            response = await response.json()
             students()
 
         })
