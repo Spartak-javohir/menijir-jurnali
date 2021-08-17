@@ -61,10 +61,15 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.section .manager__list__body .lists {
   position: relative;
 }
 
-.section .manager__list__body .back {
+.section .manager__list__body .lists .back {
+  width: 100%;
+  height: 100%;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.561);
 }
@@ -115,6 +120,8 @@ a {
   height: 100px;
   border-radius: 10px;
   position: absolute;
+  -webkit-transform: translate(50%, 100%);
+          transform: translate(50%, 100%);
 }
 
 .section .item__element__kurs button {
@@ -146,6 +153,8 @@ a {
   height: 100px;
   border-radius: 10px;
   position: absolute;
+  -webkit-transform: translate(50%, 100%);
+          transform: translate(50%, 100%);
 }
 
 .section .item__element__manba button {

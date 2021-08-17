@@ -54,6 +54,7 @@ async function students(){
 }
 
 function renderStudents(arr){
+    tbodyElem.innerHTML = ""
     for (let i of arr){
 
         const trElem = document.createElement('tr')
