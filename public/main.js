@@ -7,6 +7,14 @@ const selectManbaElem = document.querySelector("#selectManbaElem")
 const itemElemenActive = document.querySelector('.item__element_active')
 const tbodyElem = document.querySelector('.tbody')
 
+// clickled on
+
+const itemElementKurs = document.querySelector(".item__element__kurs")
+const itemElementManba = document.querySelector(".item__element__manba")
+
+// clickled off
+
+
 addButton.addEventListener("click", async event => {
     event.preventDefault()
    let response = await fetch("/uform",      {

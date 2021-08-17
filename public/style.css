@@ -61,28 +61,38 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
 }
 
-.section tr, .section th, .section td {
+.section .manager__list__body .back {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.561);
+}
+
+.section .manager__list__body .item__element_active {
+  position: relative;
+}
+
+.section .manager__list__body .item__element_active tr, .section .manager__list__body .item__element_active th, .section .manager__list__body .item__element_active td {
   border: 1px solid black;
 }
 
-.section th {
+.section .manager__list__body .item__element_active th {
   font-size: 25px;
   padding: 10px 20px;
 }
 
-.section td {
+.section .manager__list__body .item__element_active td {
   font-size: 20px;
   padding: 7px 15px;
 }
 
-.section table {
+.section .manager__list__body .item__element_active table {
   border-collapse: collapse;
   width: 90%;
 }
 
-.section td button {
+.section .manager__list__body .item__element_active td button {
   padding: 8px 20px;
   border-radius: 5px;
   background-color: red;
@@ -104,6 +114,7 @@ a {
   background-color: rgba(255, 218, 7, 0.5);
   height: 100px;
   border-radius: 10px;
+  position: absolute;
 }
 
 .section .item__element__kurs button {
@@ -134,6 +145,7 @@ a {
   background-color: rgba(255, 218, 7, 0.5);
   height: 100px;
   border-radius: 10px;
+  position: absolute;
 }
 
 .section .item__element__manba button {
@@ -147,5 +159,11 @@ a {
   border: none;
   padding: 7px;
   border-radius: 5px;
+}
+
+.section .clickled {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
