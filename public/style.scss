@@ -38,6 +38,7 @@ a{
             select{
                 margin: 10px;
             }
+            
             button{
                 margin: 10px;
             }
@@ -49,10 +50,6 @@ a{
         align-items: flex-start;
 
         
-        // .main{
-        //     width: 65%;
-        //     margin-left: 100px;
-        //     margin-top: 50px;
         }
         
          tr, th, td{
@@ -83,7 +80,7 @@ a{
         }
 
         .item__element__kurs{
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             z-index: 20;

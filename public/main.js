@@ -29,6 +29,7 @@ addButton.addEventListener("click", async event => {
 window.addEventListener("DOMContentLoaded", async e=>{ 
 
     students()
+    manbalar()
     kurslar()
 
 
