@@ -6,11 +6,22 @@ const selectKursElem = document.querySelector("#selectKursElem")
 const selectManbaElem = document.querySelector("#selectManbaElem")
 const itemElemenActive = document.querySelector('.item__element_active')
 const tbodyElem = document.querySelector('.tbody')
+//kusrlar
+const addKursInputElem = document.querySelector("#kursInputElem")
+const kaddBtnElem = document.querySelector("#kaddBtnElem")
+const kform = document.querySelector("#kform")
+// manbalar bolimi
+const mform = document.querySelector("#mform")
+const minput = document.querySelector("#minput")
 
 // clickled on
 
 const itemElementKurs = document.querySelector(".item__element__kurs")
 const itemElementManba = document.querySelector(".item__element__manba")
+const listPopulBtnElem = document.querySelector(".list__popul")
+const addKursBtnElem = document.querySelector(".add__kurs")
+const addManbaBtnElem = document.querySelector(".add__manba")
+const backElem = document.querySelector(".back")
 
 // clickled off
 
@@ -97,9 +108,7 @@ function renderStudents(arr){
 
 
 // kurslar bolimi
-const addKursInputElem = document.querySelector("#kursInputElem")
-const kaddBtnElem = document.querySelector("#kaddBtnElem")
-const kform = document.querySelector("#kform")
+
 
 
 
@@ -144,10 +153,8 @@ function renderkurs(arr){
     }
 }
 
-
 // manbalar bolimi
-const mform = document.querySelector("#mform")
-const minput = document.querySelector("#minput")
+
 
 mform.addEventListener("submit", async event => {
     event.preventDefault()
@@ -184,3 +191,23 @@ function rendermanba(arr){
         minput.value = ""
     }
 }
+
+// click
+
+
+
+listPopulBtnElem.addEventListener('click', e=>{
+    backElem.classList.remove('clicked')
+    itemElementKurs.classList.remove('clicked')
+    itemElementManba.classList.remove('clicked')
+})
+addKursBtnElem.addEventListener('click', e=>{
+    backElem.classList.add('clicked')
+    itemElementKurs.classList.add('clicked')
+    itemElementManba.classList.remove('clicked')
+})
+addManbaBtnElem.addEventListener('click', e=>{
+    backElem.classList.add('clicked')
+    itemElementKurs.classList.remove('clicked')
+    itemElementManba.classList.add('clicked')
+})
