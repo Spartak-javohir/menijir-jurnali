@@ -70,3 +70,10 @@ app.post("/mform", async (req, res)=>{
 
 })
  
+
+app.delete("/delete/:id", async (req, res)=>{
+    await db.delete(req.params.id)
+    res.json({
+        ok: true,
+    })
+})

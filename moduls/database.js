@@ -83,4 +83,11 @@ module.exports = class Database{
         await fs.writeFile(this.mpath, JSON.stringify({mdata:this.mdata}))
          return mdata
     }
+    async delete(id){
+        let udata = await this.readufile()
+        let filtered = udata.filter(e => e.id != id)
+        await fs.writeFile( this.upath, JSON.stringify({
+            udata: filtered
+        }))
+    }
 }

@@ -100,7 +100,12 @@ function renderStudents(arr){
 
 
         buttonDeleteElem.addEventListener('click', async event=>{
-            
+            let response = fetch("/delete/"+ i.id, {
+                method: "DELETE",
+                
+            })
+            students()
+
         })
     }
 }
@@ -191,23 +196,3 @@ function rendermanba(arr){
         minput.value = ""
     }
 }
-
-// click
-
-
-
-listPopulBtnElem.addEventListener('click', e=>{
-    backElem.classList.remove('clicked')
-    itemElementKurs.classList.remove('clicked')
-    itemElementManba.classList.remove('clicked')
-})
-addKursBtnElem.addEventListener('click', e=>{
-    backElem.classList.add('clicked')
-    itemElementKurs.classList.add('clicked')
-    itemElementManba.classList.remove('clicked')
-})
-addManbaBtnElem.addEventListener('click', e=>{
-    backElem.classList.add('clicked')
-    itemElementKurs.classList.remove('clicked')
-    itemElementManba.classList.add('clicked')
-})
